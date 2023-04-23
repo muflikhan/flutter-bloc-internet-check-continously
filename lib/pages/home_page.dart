@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
             child: Text('Internet Not Connected'),
           );
         }
-        return Container();
+        return const SizedBox.shrink();
       },
     ));
   }

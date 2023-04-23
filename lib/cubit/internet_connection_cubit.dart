@@ -24,7 +24,8 @@ class InternetConnectionCubit extends Cubit<InternetConnectionState> {
     try {
       final List<InternetAddress> result =
           await InternetAddress.lookup('example.com');
-      final isConnected = result.isNotEmpty && result[0].rawAddress.isNotEmpty;
+      final bool isConnected =
+          result.isNotEmpty && result[0].rawAddress.isNotEmpty;
       if (isConnected) {
         emit(InternetConnectionConnected());
       } else {
